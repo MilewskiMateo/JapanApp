@@ -1,0 +1,33 @@
+\babel@toc {polish}{}
+\thispagestyle {empty}
+\contentsline {section}{\numberline {1}Informacje ogólne}{2}%
+\contentsline {subsection}{\numberline {1.1}Opis przekrojowy}{2}%
+\contentsline {subsection}{\numberline {1.2}System docelowy}{2}%
+\contentsline {subsection}{\numberline {1.3}Język}{2}%
+\contentsline {subsection}{\numberline {1.4}Konwencja nazewnictwa}{2}%
+\contentsline {subsection}{\numberline {1.5}Wykorzystywane narzędzia}{2}%
+\contentsline {subsection}{\numberline {1.6}System kontroli wersji}{3}%
+\contentsline {section}{\numberline {2}Opis pakietów}{3}%
+\contentsline {subsection}{\numberline {2.1}Main}{3}%
+\contentsline {subsection}{\numberline {2.2}Images}{3}%
+\contentsline {subsection}{\numberline {2.3}Test}{3}%
+\contentsline {section}{\numberline {3}GUI}{4}%
+\contentsline {subsection}{\numberline {3.1}Scena menu głównego}{4}%
+\contentsline {subsection}{\numberline {3.2}Scena wyboru systemu znakowego}{4}%
+\contentsline {subsection}{\numberline {3.3}Scena trybu ,,DrawIt''}{5}%
+\contentsline {subsection}{\numberline {3.4}Scena trybu,,GuessIt''}{5}%
+\contentsline {subsection}{\numberline {3.5}Scena podsumowania}{5}%
+\contentsline {subsection}{\numberline {3.6}Scena z informacjami od twórców}{6}%
+\contentsline {section}{\numberline {4}Opis klas}{6}%
+\contentsline {subsection}{\numberline {4.1}Opis}{6}%
+\contentsline {subsection}{\numberline {4.2}Diagram}{6}%
+\contentsline {subsubsection}{\numberline {4.2.1}MainActivity}{8}%
+\contentsline {subsubsection}{\numberline {4.2.2}SystemChoiceActivity}{8}%
+\contentsline {subsubsection}{\numberline {4.2.3}DrawActivity}{8}%
+\contentsline {subsubsection}{\numberline {4.2.4}FingerPath}{8}%
+\contentsline {subsubsection}{\numberline {4.2.5}GuessActivity}{8}%
+\contentsline {subsubsection}{\numberline {4.2.6}PointsActivity}{9}%
+\contentsline {subsubsection}{\numberline {4.2.7}CreditsActiity}{9}%
+\contentsline {section}{\numberline {5}Testowanie}{9}%
+\contentsline {subsection}{\numberline {5.1}Konwencja nazewnictwa}{9}%
+\contentsline {subsection}{\numberline {5.2}Rodzaje testów}{9}%

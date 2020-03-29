@@ -1,0 +1,149 @@
+PWD c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.tex
+OUTPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.log
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1000.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-polish\polish.ldf
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-polish\polish.ldf
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\generic\iftex\iftex.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux
+OUTPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1728.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.toc
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.toc
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1000.tfm
+OUTPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.toc
+OUTPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.pdf
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1000.tfm
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecsl1000.tfm
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\menu.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\menu.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\menu.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\menu.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\menu.png
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0900.tfm
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\chose.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\chose.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\chose.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\chose.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\chose.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\draw.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\draw.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\draw.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\draw.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\draw.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\guess.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\guess.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\guess.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\guess.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\guess.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\points.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\points.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\points.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\points.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\points.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\credits.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\credits.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\credits.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\credits.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\credits.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\diagram.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\diagram.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\diagram.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\diagram.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\diagram.png
+INPUT c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecsl1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb

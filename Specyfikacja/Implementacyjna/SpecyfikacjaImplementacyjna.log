@@ -1,0 +1,336 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.17)  29 MAR 2020 22:58
+entering extended mode
+**c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/SpecyfikacjaImplementacyjna.tex
+(c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/SpecyfikacjaImplementacyjna.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
+Package: babel 2020/02/14 3.40 The Babel package
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.def"
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-polish\polish.ldf"
+Language: polish 2005/03/31 v1.2l Polish support from the babel system
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.def")
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+Package babel Info: Making " an active character on input line 83.
+\pl@left=\dimen136
+\pl@down=\dimen137
+\pl@right=\dimen138
+\pl@temp=\dimen139
+)) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\indentfirst.sty"
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen140
+\Gin@req@width=\dimen141
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption.sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.sty"
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen142
+\captionmargin@=\dimen143
+\captionwidth=\dimen144
+\caption@tempdima=\dimen145
+\caption@indent=\dimen146
+\caption@parindent=\dimen147
+\caption@hangindent=\dimen148
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count177
+\c@continuedfloat=\count178
+)
+\c@subfigure=\count179
+\c@subtable=\count180
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lastpage\lastpage.sty"
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.sty"
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty"
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count181
+\Gm@cntv=\count182
+\c@Gm@tempcnt=\count183
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks17
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.cfg")) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count184
+\l__pdf_internal_box=\box45
+)
+
+LaTeX Warning: Unused global option(s):
+    [15pt].
+
+(c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux
+
+LaTeX Warning: Label `fig:coffee' multiply defined.
+
+)
+\openout1 = `SpecyfikacjaImplementacyjna.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+ ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count185
+\scratchdimen=\dimen157
+\scratchbox=\box46
+\nofMPsegments=\count186
+\nofMParguments=\count187
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count188
+\MPscratchDim=\dimen158
+\MPnumerator=\count189
+\makeMPintoPDFobject=\count190
+\everyMPtoPDFconversion=\toks19
+) ("C:\Users\Mateusz\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 29.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(104.79128pt, 404.71245pt, 104.79128pt)
+* v-part:(T,H,B)=(104.79128pt, 585.38744pt, 104.79128pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=404.71245pt
+* \textheight=585.38744pt
+* \oddsidemargin=32.52129pt
+* \evensidemargin=32.52129pt
+* \topmargin=-4.47871pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 30.
+(c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+)
+\tf@toc=\write3
+\openout3 = `SpecyfikacjaImplementacyjna.toc'.
+
+ [1
+
+{C:/Users/Mateusz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 35--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--61
+
+ []
+
+[2
+
+] [3]
+<menu.png, id=21, 282.68109pt x 388.45125pt>
+File: menu.png Graphic file (type png)
+<use menu.png>
+Package pdftex.def Info: menu.png  used on input line 87.
+(pdftex.def)             Requested size: 141.65182pt x 194.65782pt.
+<chose.png, id=22, 282.30469pt x 387.69844pt>
+File: chose.png Graphic file (type png)
+<use chose.png>
+Package pdftex.def Info: chose.png  used on input line 92.
+(pdftex.def)             Requested size: 141.65182pt x 194.53496pt.
+ [4 <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/menu.png> <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/chose.png>]
+<draw.png, id=27, 283.81032pt x 388.82765pt>
+File: draw.png Graphic file (type png)
+<use draw.png>
+Package pdftex.def Info: draw.png  used on input line 108.
+(pdftex.def)             Requested size: 141.65182pt x 194.07516pt.
+<guess.png, id=28, 282.30469pt x 388.07484pt>
+File: guess.png Graphic file (type png)
+<use guess.png>
+Package pdftex.def Info: guess.png  used on input line 112.
+(pdftex.def)             Requested size: 141.65182pt x 194.72383pt.
+<points.png, id=29, 180.675pt x 248.3679pt>
+File: points.png Graphic file (type png)
+<use points.png>
+Package pdftex.def Info: points.png  used on input line 130.
+(pdftex.def)             Requested size: 141.65182pt x 194.72667pt.
+<credits.png, id=31, 752.8125pt x 1034.86626pt>
+File: credits.png Graphic file (type png)
+<use credits.png>
+Package pdftex.def Info: credits.png  used on input line 134.
+(pdftex.def)             Requested size: 141.65182pt x 194.71594pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/draw.png> <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/guess.png>]
+<diagram.png, id=35, 461.47406pt x 563.85657pt>
+File: diagram.png Graphic file (type png)
+<use diagram.png>
+Package pdftex.def Info: diagram.png  used on input line 152.
+(pdftex.def)             Requested size: 404.71245pt x 494.50038pt.
+ [6 <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/points.png> <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/credits.png>] [7 <c:/Users/Mateusz/Desktop/Indywidualny/Specyfikacja/Implementacyjna/diagram.png>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 181--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--188
+
+ []
+
+
+Overfull \hbox (5.42351pt too wide) in paragraph at lines 181--188
+\T1/cmr/m/n/10 trybu ,,gu-es-sIt'', b¦-dzie miaª na-zw¦ ,,te-st-Ge-ne-ra-te-Ran-do-mAn-swer-Chec-kIn-cor-rect-ne-sO-fAn-swers''. 
+ []
+
+
+AED: lastpage setting LastPage
+[9] (c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4479 strings out of 481556
+ 67995 string characters out of 2912933
+ 323512 words of memory out of 3000000
+ 19679 multiletter control sequences out of 15000+200000
+ 543160 words of font info for 44 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 48i,11n,46p,1041b,476s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsl1000.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Mateusz\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk><C:/Users/Mateusz/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Mateusz/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on c:\Users\Mateusz\Desktop\Indywidualny\Specyfikacja\Implementacyjna\SpecyfikacjaImplementacyjna.pdf (9 pages, 320178 bytes).
+PDF statistics:
+ 404 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+
