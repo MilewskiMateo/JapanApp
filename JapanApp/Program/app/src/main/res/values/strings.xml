@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">JappanAppProgram</string>
+    <string name="drawit">DrawIT</string>
+    <string name="guessit">GuessIt</string>
+    <string name="credits">Credits</string>
+    <string name="hiragana">Hiragana</string>
+    <string name="katakana">Katakana</string>
+    <string name="kanji">Kanji</string>
 </resources>
