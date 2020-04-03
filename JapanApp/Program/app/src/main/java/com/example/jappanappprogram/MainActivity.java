@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btDraw=findViewById(R.id.btHiragana);
-        btDraw=findViewById(R.id.btKatakana);
-        btDraw=findViewById(R.id.btKanji);
+        btDraw=findViewById(R.id.btDraw);
+        btGuess=findViewById(R.id.btGuess);
+        btCredits=findViewById(R.id.btCredits);
 
         btDraw.setOnClickListener(new View.OnClickListener() {
             @Override
