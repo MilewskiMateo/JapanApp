@@ -21,10 +21,9 @@
         android:textColor="#FFFFFF"
         android:textSize="36sp" />
 
-    <View
-        android:id="@+id/view"
+    <com.example.jappanappprogram.PaintView
+        android:id="@+id/paintView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="#595959" />
+        android:layout_height="match_parent" />
+
 </LinearLayout>
