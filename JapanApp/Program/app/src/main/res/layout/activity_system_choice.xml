@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#454545"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     tools:context=".SystemChoiceActivity">
 
@@ -17,10 +17,9 @@
         android:layout_marginTop="250dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#000000"
-        android:hapticFeedbackEnabled="false"
+        android:background="@color/colorPrimary"
         android:text="@string/hiragana"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textColorHighlight="#FF0000"
         android:textColorLink="#FFFFFF" />
 
@@ -33,9 +32,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#000000"
+        android:background="@color/colorPrimary"
         android:text="@string/katakana"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textColorHighlight="#FF0000"
         android:textColorLink="#FFFFFF" />
 
@@ -48,9 +47,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#000000"
+        android:background="@color/colorPrimary"
         android:text="@string/kanji"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textColorHighlight="#FF0000"
         android:textColorLink="#FFFFFF"
         tools:text="Kanji" />

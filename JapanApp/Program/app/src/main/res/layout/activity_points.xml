@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#404040"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     tools:context=".PointsActivity">
 
@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="30dp"
-        android:background="#A1A0A0"
+        android:background="@color/colorPrimary"
         android:orientation="vertical">
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:background="#8F8A8A"
+            android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/points"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:background="#8F8A8A"
+            android:background="@color/colorPrimaryDark"
             android:gravity="center"
             android:text="@string/number"
             android:textSize="36sp" />
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:background="#494949"
+            android:background="@color/colorPrimaryDark"
             android:text="@string/back" />
     </LinearLayout>
 </LinearLayout>

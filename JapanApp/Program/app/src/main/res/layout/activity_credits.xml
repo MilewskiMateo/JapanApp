@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5A5A5A"
+    android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
     android:scrollbarSize="4dp"
     tools:context=".CreditsActivity">
