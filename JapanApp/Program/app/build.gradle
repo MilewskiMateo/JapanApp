@@ -26,6 +26,7 @@ android {
         targetCompatibility = 1.8
     }
 
+
 }
 
 dependencies {
@@ -54,3 +55,5 @@ dependencies {
 // Testing
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
 }
+
+
