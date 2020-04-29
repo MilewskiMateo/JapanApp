@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
@@ -17,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 import java.io.File;
 import java.lang.reflect.Field;
 import java.util.Arrays;
@@ -26,8 +29,11 @@ public class GuessItActivity extends AppCompatActivity {
     ImageView imgSign;
     Button answer1, answer2, answer3, answer4;
     TextView tvSystemSign;
+    LottieAnimationView redLottieAnimation;
 
     String rightAnswer;
+    Boolean isAnswerPicked = false;
+    int numberOfCycles, points;
     String signSystem;
     WordViewModel mWordViewModel = null;
 
@@ -37,6 +43,8 @@ public class GuessItActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guess_it);
 
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+
+        redLottieAnimation= findViewById(R.id.LottieRedAnimation);
 
         signSystem = getIntent().getStringExtra("system");
         answer1 = findViewById(R.id.btAnswer1);
@@ -80,8 +88,8 @@ public class GuessItActivity extends AppCompatActivity {
                         imgSign.setImageResource(getResId("kata_" + rightAnswer, R.drawable.class));
                     } else if (signSystem.equals("kanji")) {
                         imgSign.setImageResource(getResId("kanji_" + rightAnswer, R.drawable.class));
-
                     }
+                    redLottieAnimation.playAnimation();
                 }
 
             }
@@ -91,23 +99,37 @@ public class GuessItActivity extends AppCompatActivity {
         imgSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mWordViewModel.deleteAll();
-                if (signSystem.equals("hiragana") || signSystem.equals("katakana")) {
-                    for (int i = 0; i < 9; i++) {
+                if(numberOfCycles==20){
+                    Intent guessIntent = new Intent(GuessItActivity.this, com.example.jappanappprogram.PointsActivity.class);
+                    guessIntent.putExtra("points",points);
+                    startActivity(guessIntent);
+                }else {
 
-                        Word toInsert = new Word(getOneRandomHiraKataWord());
-                        System.out.println(toInsert.getWord());
-                        mWordViewModel.insert(toInsert);
-                    }
-                } else if (signSystem.equals("kanji")) {
-                    for (int i = 0; i < 9; i++) {
 
-                        Word toInsert = new Word(getOneRandomKanjiWord());
-                        System.out.println(toInsert.getWord());
-                        mWordViewModel.insert(toInsert);
+                    mWordViewModel.deleteAll();
+                    if (signSystem.equals("hiragana") || signSystem.equals("katakana")) {
+                        for (int i = 0; i < 7; i++) {
+
+                            Word toInsert = new Word(RandomWordPicker.getOneRandomHiraKataWord());
+                            System.out.println(toInsert.getWord());
+                            mWordViewModel.insert(toInsert);
+
+                        }
+                    } else if (signSystem.equals("kanji")) {
+                        for (int i = 0; i < 7; i++) {
+
+                            Word toInsert = new Word(RandomWordPicker.getOneRandomKanjiWord());
+                            System.out.println(toInsert.getWord());
+                            mWordViewModel.insert(toInsert);
+                        }
                     }
+
+                    answer1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    answer2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    answer3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    answer4.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    isAnswerPicked = false;
                 }
-
             }
         });
 
@@ -115,53 +137,83 @@ public class GuessItActivity extends AppCompatActivity {
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answer1.getText() == rightAnswer) {
-                    System.out.println("eureka");
+                if(!isAnswerPicked) {
+                    if (answer1.getText() == rightAnswer) {
+                        answer1.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        points++;
+                    } else {
+                        answer1.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        makeGreenRightAnswer();
+                    }
+                    isAnswerPicked=true;
+                    numberOfCycles++;
                 }
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answer2.getText() == rightAnswer) {
-                    System.out.println("eureka");
+                if(!isAnswerPicked) {
+
+                    if (answer2.getText() == rightAnswer) {
+                        answer2.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        points++;
+                    } else {
+                        answer2.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        makeGreenRightAnswer();
+                    }
+                    isAnswerPicked=true;
+                    numberOfCycles++;
                 }
             }
         });
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answer3.getText() == rightAnswer) {
-                    System.out.println("eureka");
+                if(!isAnswerPicked) {
+                    if (answer3.getText() == rightAnswer) {
+                        answer3.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        points++;
+                    } else {
+                        answer3.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        makeGreenRightAnswer();
+                    }
+                    isAnswerPicked = true;
+                    numberOfCycles++;
                 }
             }
         });
         answer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (answer4.getText() == rightAnswer) {
-                    System.out.println("eureka");
+                if(!isAnswerPicked) {
+                    if (answer4.getText() == rightAnswer) {
+                        answer4.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        points++;
+                    } else {
+                        answer4.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        makeGreenRightAnswer();
+                    }
+                    isAnswerPicked = true;
+                    numberOfCycles++;
                 }
             }
         });
     }
 
-    public String getOneRandomHiraKataWord() {
 
-        List<String> hiragana = Arrays.asList("a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko");
-        int max = 10;
-        int min = 0;
-        int rand = (int) (Math.random() * max - min + 1) + min - 1;
-        return hiragana.get(rand);
-    }
 
-    public String getOneRandomKanjiWord() {
+    public void makeGreenRightAnswer(){
 
-        List<String> hiragana = Arrays.asList("a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko");
-        int max = 10;
-        int min = 0;
-        int rand = (int) (Math.random() * max - min + 1) + min - 1;
-        return hiragana.get(rand);
+        if (answer1.getText()==rightAnswer){
+            answer1.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+        }else if(answer2.getText()==rightAnswer) {
+            answer2.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+        }else if(answer3.getText()==rightAnswer){
+            answer3.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+        }else if(answer4.getText()==rightAnswer){
+            answer4.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+        }
     }
 
 

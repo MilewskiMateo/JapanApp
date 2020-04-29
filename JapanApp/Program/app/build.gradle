@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+final lottieVersion = '3.4.0'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
@@ -39,6 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
 
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
     // Room components
     implementation "androidx.room:room-runtime:$rootProject.roomVersion"

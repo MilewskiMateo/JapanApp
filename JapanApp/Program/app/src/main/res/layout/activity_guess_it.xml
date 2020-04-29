@@ -8,31 +8,45 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".GuessItActivity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imgSign"
+        app:layout_constraintTop_toTopOf="@id/imgSign"
+        app:layout_constraintLeft_toLeftOf="@id/imgSign"
+        app:layout_constraintRight_toRightOf="@id/imgSign"
+        android:id="@+id/LottieRedAnimation"
+        app:lottie_fileName="LottieRedAnimation.json"
+        app:lottie_speed="1.6"
+        >
+
+    </com.airbnb.lottie.LottieAnimationView>
+
     <TextView
         android:id="@+id/tvSystemSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/SystemZnakowy"
         android:background="@color/colorPrimary"
         android:padding="20dp"
+        android:text="@string/SystemZnakowy"
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/imgSign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_chainStyle="spread"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <ImageView
         android:id="@+id/imgSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:contentDescription="@string/zdjecie_znaku"
         android:padding="40dp"
+        app:layout_constraintBottom_toTopOf="@id/conLay"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvSystemSign"
-        app:layout_constraintBottom_toTopOf="@id/conLay"
-        android:contentDescription="@string/zdjecie_znaku" />
+        app:layout_constraintTop_toBottomOf="@id/tvSystemSign" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/conLay"
