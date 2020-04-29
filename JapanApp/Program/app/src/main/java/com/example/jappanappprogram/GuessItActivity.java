@@ -79,7 +79,7 @@ public class GuessItActivity extends AppCompatActivity {
                     int rand = (int) (Math.random() * 3 + 2) - 1;
                     rightAnswer = words.get(rand).getWord();
 
-                    System.out.println("rightAnswer=" + rightAnswer);
+                    //System.out.println("rightAnswer=" + rightAnswer);
 
 
                     if (signSystem.equals("hiragana")) {
@@ -111,7 +111,7 @@ public class GuessItActivity extends AppCompatActivity {
                         for (int i = 0; i < 7; i++) {
 
                             Word toInsert = new Word(RandomWordPicker.getOneRandomHiraKataWord());
-                            System.out.println(toInsert.getWord());
+                            //System.out.println(toInsert.getWord());
                             mWordViewModel.insert(toInsert);
 
                         }
@@ -119,7 +119,7 @@ public class GuessItActivity extends AppCompatActivity {
                         for (int i = 0; i < 7; i++) {
 
                             Word toInsert = new Word(RandomWordPicker.getOneRandomKanjiWord());
-                            System.out.println(toInsert.getWord());
+                           // System.out.println(toInsert.getWord());
                             mWordViewModel.insert(toInsert);
                         }
                     }
