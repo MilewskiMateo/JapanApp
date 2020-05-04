@@ -8,22 +8,62 @@
     android:orientation="vertical"
     tools:context=".DrawItActivity">
 
-    <TextView
-        android:id="@+id/tvSigntextView"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@color/colorPrimary"
+        android:layout_gravity="center"
         android:gravity="center"
-        android:padding="5dp"
-        android:shadowColor="#FFFFFF"
-        android:text="@string/znak"
-        android:textColor="#000000"
-        android:textSize="36sp" />
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvDrawIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00898989"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:shadowColor="#FFFFFF"
+            android:text="DrawIt:"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tvSign"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
+
+        <TextView
+            android:id="@+id/tvSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvDrawIt"
+            app:layout_constraintRight_toLeftOf="@id/btDone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btDone"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:text="Done"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvSign"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.example.jappanappprogram.PaintView
         android:id="@+id/paintView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp" />
 
 </LinearLayout>
