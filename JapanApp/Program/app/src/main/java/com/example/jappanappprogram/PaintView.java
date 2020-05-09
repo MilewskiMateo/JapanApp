@@ -19,6 +19,7 @@ import android.view.View;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -38,6 +39,13 @@ public class PaintView extends View {
     private Bitmap mBitmap;
     private Canvas mCanvas;
 
+    public Paint getmPaint() {
+        return mPaint;
+    }
+
+    public Bitmap getmBitmap() {
+        return mBitmap;
+    }
 
     public PaintView(Context context) {
         this(context, null);
@@ -86,39 +94,46 @@ public class PaintView extends View {
         mY = y;
     }
     public void clear() {
-        FileOutputStream fos = null;
+     //   FileOutputStream fos = null;
 
-        try
-        {
-            fos = this.getContext().openFileOutput("narywowany", MODE_PRIVATE);
-            mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-
-            fos.flush();
-            fos.close();
-            fos = null;
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            if (fos != null)
-            {
-                try
-                {
-                    fos.close();
-                    fos = null;
-                }
-                catch (IOException e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-
-        System.out.println(Environment.getExternalStorageDirectory());
+//        try
+//        {
+//           // fos = this.getContext().openFileOutput("narywowany", MODE_PRIVATE);
+//           // mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+//
+//          //  fos.flush();
+//           // fos.close();
+//          //  fos = null;
+//
+//
+//            String fileName = Environment.getExternalStorageDirectory() + "/test.png";
+//            OutputStream stream = new FileOutputStream(fileName);
+//            /* Write bitmap to file using JPEG or PNG and 80% quality hint for JPEG. */
+//            mBitmap.compress(Bitmap.CompressFormat.PNG, 80, stream);
+//            stream.close();
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//        }
+//        finally
+//        {
+//            if (fos != null)
+//            {
+//                try
+//                {
+//                    fos.close();
+//                    fos = null;
+//                }
+//                catch (IOException e)
+//                {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//
+//
+//        System.out.println(Environment.getExternalStorageDirectory());
 
 
         mCanvas.drawColor(backgroundColor);
