@@ -2,61 +2,55 @@ package com.example.jappanappprogram;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-import java.io.File;
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.List;
 
 public class GuessItActivity extends AppCompatActivity {
-    ImageView imgSign;
-    Button answer1, answer2, answer3, answer4;
-    TextView tvSystemSign;
-    LottieAnimationView redLottieAnimation;
+    private ImageView imgSign;
+    private Button answer1, answer2, answer3, answer4;
+    private TextView tvSystemSign;
+    private LottieAnimationView redLottieAnimation;
+    private WordViewModel mWordViewModel = null;
 
-    String rightAnswer;
-    Boolean isAnswerPicked = false;
-    int numberOfCycles, points;
-    String signSystem;
-    WordViewModel mWordViewModel = null;
+    private String rightAnswer;
+    private Boolean isAnswerPicked = false;
+    private int numberOfCyclesAlreadyDoneIt,desiredNumberOfCycles, points;
+    private String signSystem;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guess_it);
 
-        mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
-
         redLottieAnimation= findViewById(R.id.LottieRedAnimation);
-
-        signSystem = getIntent().getStringExtra("system");
+        tvSystemSign = findViewById(R.id.tvSystemSign);
         answer1 = findViewById(R.id.btAnswer1);
         answer2 = findViewById(R.id.btAnswer2);
         answer3 = findViewById(R.id.btAnswer3);
         answer4 = findViewById(R.id.btAnswer4);
-
         imgSign = findViewById(R.id.imgSign);
+
+
+        signSystem = getIntent().getStringExtra("system");
+        desiredNumberOfCycles = getIntent().getIntExtra("cycles",20);
+
+        mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+
         imgSign.getLayoutParams().height = 500;
         imgSign.getLayoutParams().width = 500;
-
-        tvSystemSign = findViewById(R.id.tvSystemSign);
 
         if (signSystem.equals("hiragana")) {
             tvSystemSign.setText(R.string.hiragana);
@@ -99,7 +93,7 @@ public class GuessItActivity extends AppCompatActivity {
         imgSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberOfCycles==20){
+                if(numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles){
                     Intent guessIntent = new Intent(GuessItActivity.this, com.example.jappanappprogram.PointsActivity.class);
                     guessIntent.putExtra("points",points);
                     startActivity(guessIntent);
@@ -146,7 +140,7 @@ public class GuessItActivity extends AppCompatActivity {
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked=true;
-                    numberOfCycles++;
+                    numberOfCyclesAlreadyDoneIt++;
                 }
             }
         });
@@ -163,7 +157,7 @@ public class GuessItActivity extends AppCompatActivity {
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked=true;
-                    numberOfCycles++;
+                    numberOfCyclesAlreadyDoneIt++;
                 }
             }
         });
@@ -179,7 +173,7 @@ public class GuessItActivity extends AppCompatActivity {
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked = true;
-                    numberOfCycles++;
+                    numberOfCyclesAlreadyDoneIt++;
                 }
             }
         });
@@ -195,7 +189,7 @@ public class GuessItActivity extends AppCompatActivity {
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked = true;
-                    numberOfCycles++;
+                    numberOfCyclesAlreadyDoneIt++;
                 }
             }
         });

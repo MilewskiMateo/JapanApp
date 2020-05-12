@@ -1,56 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    android:orientation="vertical"
     tools:context=".SystemChoiceActivity">
 
-    <Button
-        android:id="@+id/btHiragana"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/hiragana"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF" />
 
-    <Button
-        android:id="@+id/btKatakana"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/katakana"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF" />
+    <com.lukelorusso.verticalseekbar.VerticalSeekBar
+        android:id="@+id/vskCyclesSwitcher"
+        android:layout_width="23dp"
+        android:layout_height="305dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/constraintForButtons"
+        app:layout_constraintTop_toTopOf="@+id/constraintForButtons"
+        app:vsb_bar_background="@color/colorPrimary"
+        app:vsb_bar_corner_radius="15dp"
+        app:vsb_bar_progress_gradient_end="#000000"
+        app:vsb_bar_progress_gradient_start="@color/colorPrimaryDark"
+        app:vsb_bar_width="10dp"
+        app:vsb_click_to_set_progress="false"
+        app:vsb_max_placeholder_position="inside"
+        app:vsb_min_placeholder_position="inside"
+        app:vsb_progress="50"
+        app:vsb_show_thumb="true"
+        app:vsb_thumb_container_corner_radius="5dp"
+        app:vsb_thumb_container_tint="@color/colorAccent"
+        app:vsb_use_thumb_to_set_progress="true" />
 
-    <Button
-        android:id="@+id/btKanji"
+    <TextView
+        android:id="@+id/tvChose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Chose sign system"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="JapanApp"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintForButtons"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/colorPrimary"
-        android:text="@string/kanji"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF"
-        tools:text="Kanji" />
-</LinearLayout>
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvChose">
+
+        <Button
+            android:id="@+id/btKatakana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:text="@string/katakana"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/btHiragana"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btHiragana" />
+
+        <Button
+            android:id="@+id/btHiragana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:text="@string/hiragana"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/btKatakana"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btKanji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:padding="20dp"
+            android:text="@string/kanji"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btKatakana"
+            tools:text="Kanji" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearForCycles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintForButtons"
+        app:layout_constraintVertical_bias="0.269">
+
+        <TextView
+            android:id="@+id/tvCyclesTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:text="Cycles limit:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tvNumber"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="aaaaaaa"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

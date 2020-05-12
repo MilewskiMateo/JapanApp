@@ -29,4 +29,7 @@
     <string name="no">No</string>
     <string name="is_it_okey">Is it okey?</string>
     <string name="are_they_similar">Are they similar?</string>
+    <string name="kanjidwukorpek">Kanji:</string>
+    <string name="katakanadwukropek">katakana:</string>
+    <string name="hiraganadwukropek">hiragana:</string>
 </resources>

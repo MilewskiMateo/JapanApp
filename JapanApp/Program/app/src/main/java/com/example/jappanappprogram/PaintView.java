@@ -27,7 +27,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class PaintView extends View {
 
-    public static int BRUSH_SIZE = 20;
+    public static int BRUSH_SIZE = 60;
     public static final int DEFAULT_COLOR = Color.BLACK;
     public static final int DEFAULT_BG_COLOR = Color.GRAY;
     private static final float TOUCH_TOLERANCE = 2;
@@ -74,6 +74,8 @@ public class PaintView extends View {
         int height = metrics.heightPixels;
         int width = metrics.widthPixels;
 
+        height = (int) (height*0.8);
+        width = (int) (width*1);
         mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         mCanvas = new Canvas(mBitmap);
         mCanvas.drawColor(backgroundColor);

@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="350dp"
+    android:layout_height="300dp"
     android:layout_gravity="center"
-    android:padding="10dp"
-    android:layout_height="wrap_content">
+    android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="170dp"
-        android:layout_height="139dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.196"
-        app:srcCompat="@drawable/hira_a" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/imgPopUpSign"
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/tvSimilar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signThatPersonDraw"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imgRightImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/hira_a" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:id="@+id/signThatPersonDraw"
-        android:layout_width="157dp"
-        android:layout_height="143dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214" />
+        android:layout_width="120dp"
+        android:layout_height="140dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/tvSimilar"
+        app:layout_constraintLeft_toRightOf="@id/imgPopUpSign"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btAddPoints"
@@ -37,13 +46,12 @@
         android:background="@color/colorRightAnswer"
         android:text="@string/yes"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.229"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btDontAddPoints"
+        app:layout_constraintTop_toBottomOf="@+id/tvSimilar" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btDontAddPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorWrongAnswer"
@@ -51,18 +59,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btAddPoints"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSimilar" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvSimilar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:text="@string/are_they_similar"
-        android:textSize="30sp"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@id/btDontAddPoints"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@id/imgPopUpSign"
+        tools:layout_editor_absoluteY="258dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
