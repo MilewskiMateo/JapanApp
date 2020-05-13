@@ -11,6 +11,7 @@ import android.graphics.MaskFilter;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
+import android.graphics.RectF;
 import android.os.Environment;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -38,6 +39,8 @@ public class PaintView extends View {
     private int backgroundColor = DEFAULT_BG_COLOR;
     private Bitmap mBitmap;
     private Canvas mCanvas;
+
+
 
     public Paint getmPaint() {
         return mPaint;
@@ -81,12 +84,14 @@ public class PaintView extends View {
         mCanvas.drawColor(backgroundColor);
 
 
+
     }
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
         canvas.drawBitmap(mBitmap, 0, 0, null);
+
     }
 
 
@@ -96,48 +101,6 @@ public class PaintView extends View {
         mY = y;
     }
     public void clear() {
-     //   FileOutputStream fos = null;
-
-//        try
-//        {
-//           // fos = this.getContext().openFileOutput("narywowany", MODE_PRIVATE);
-//           // mBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
-//
-//          //  fos.flush();
-//           // fos.close();
-//          //  fos = null;
-//
-//
-//            String fileName = Environment.getExternalStorageDirectory() + "/test.png";
-//            OutputStream stream = new FileOutputStream(fileName);
-//            /* Write bitmap to file using JPEG or PNG and 80% quality hint for JPEG. */
-//            mBitmap.compress(Bitmap.CompressFormat.PNG, 80, stream);
-//            stream.close();
-//        }
-//        catch (IOException e)
-//        {
-//            e.printStackTrace();
-//        }
-//        finally
-//        {
-//            if (fos != null)
-//            {
-//                try
-//                {
-//                    fos.close();
-//                    fos = null;
-//                }
-//                catch (IOException e)
-//                {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//
-//
-//        System.out.println(Environment.getExternalStorageDirectory());
-
-
         mCanvas.drawColor(backgroundColor);
         invalidate();
     }

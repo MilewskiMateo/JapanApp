@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background_shape"
     android:orientation="vertical"
     tools:context=".DrawItActivity">
 
@@ -51,7 +51,7 @@
             android:id="@+id/btDone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_shape"
             android:padding="10dp"
             android:text="Done"
             android:textColor="#000000"
@@ -63,10 +63,23 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.example.jappanappprogram.PaintView
-        android:id="@+id/paintView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:background="@drawable/button_shape"
+        android:padding="15dp">
+
+        <com.example.jappanappprogram.PaintView
+            android:id="@+id/paintView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background_shape"
     tools:context=".GuessItActivity">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -26,10 +26,10 @@
         android:id="@+id/tvSystemSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:padding="20dp"
+        android:padding="10dp"
         android:text="@string/SystemZnakowy"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/imgSign"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         android:id="@+id/imgSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/button_shape"
         android:contentDescription="@string/zdjecie_znaku"
         android:padding="40dp"
         app:layout_constraintBottom_toTopOf="@id/conLay"
@@ -74,22 +74,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:padding="20dp"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
                 android:text="@string/answer_1"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="36sp" />
 
             <Button
                 android:id="@+id/btAnswer2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:padding="20dp"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
                 android:text="@string/answer_2"
                 android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textSize="36sp" />
 
         </LinearLayout>
 
@@ -110,11 +110,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:padding="20dp"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
                 android:text="@string/answer_3"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="36sp"
                 tools:layout_conversion_absoluteHeight="82dp"
                 tools:layout_conversion_absoluteWidth="188dp"
                 tools:layout_editor_absoluteX="18dp"
@@ -125,11 +125,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
-                android:background="@color/colorPrimary"
-                android:padding="20dp"
+                android:background="@drawable/button_shape"
+                android:padding="10dp"
                 android:text="@string/answer_4"
                 android:textColor="#000000"
-                android:textSize="15sp"
+                android:textSize="36sp"
                 tools:layout_conversion_absoluteHeight="82dp"
                 tools:layout_conversion_absoluteWidth="188dp"
                 tools:layout_editor_absoluteX="206dp"

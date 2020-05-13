@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background_shape"
     tools:context=".SystemChoiceActivity">
 
 
@@ -38,6 +38,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="Chose sign system"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -52,6 +53,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:text="JapanApp"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +73,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_shape"
             android:padding="20dp"
             android:text="@string/katakana"
             android:textColor="#000000"
@@ -88,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_shape"
             android:padding="20dp"
             android:text="@string/hiragana"
             android:textColor="#000000"
@@ -105,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/button_shape"
             android:padding="20dp"
             android:text="@string/kanji"
             android:textColor="#000000"
@@ -135,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="43dp"
             android:text="Cycles limit:"
+            android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
         <TextView
@@ -144,6 +147,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:text="aaaaaaa"
+            android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
     </LinearLayout>

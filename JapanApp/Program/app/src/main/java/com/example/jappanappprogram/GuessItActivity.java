@@ -6,6 +6,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class GuessItActivity extends AppCompatActivity {
 
     private String rightAnswer;
     private Boolean isAnswerPicked = false;
+    private Boolean blockRerol = false;
     private int numberOfCyclesAlreadyDoneIt,desiredNumberOfCycles, points;
     private String signSystem;
 
@@ -42,6 +44,13 @@ public class GuessItActivity extends AppCompatActivity {
         answer3 = findViewById(R.id.btAnswer3);
         answer4 = findViewById(R.id.btAnswer4);
         imgSign = findViewById(R.id.imgSign);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "freeJapaneseFont.ttf");
+        answer1.setTypeface(typeface);
+        answer2.setTypeface(typeface);
+        answer3.setTypeface(typeface);
+        answer4.setTypeface(typeface);
+        tvSystemSign.setTypeface(typeface);
 
 
         signSystem = getIntent().getStringExtra("system");
@@ -93,39 +102,44 @@ public class GuessItActivity extends AppCompatActivity {
         imgSign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles){
-                    Intent guessIntent = new Intent(GuessItActivity.this, com.example.jappanappprogram.PointsActivity.class);
-                    guessIntent.putExtra("points",points);
-                    startActivity(guessIntent);
-                }else {
+                if(blockRerol==false) {
+                    if (numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles) {
+                        Intent guessIntent = new Intent(GuessItActivity.this, com.example.jappanappprogram.PointsActivity.class);
+                        guessIntent.putExtra("points", points);
+                        startActivity(guessIntent);
+                    } else {
 
 
-                    mWordViewModel.deleteAll();
-                    if (signSystem.equals("hiragana") || signSystem.equals("katakana")) {
-                        for (int i = 0; i < 7; i++) {
+                        mWordViewModel.deleteAll();
+                        if (signSystem.equals("hiragana") || signSystem.equals("katakana")) {
+                            for (int i = 0; i < 7; i++) {
 
-                            Word toInsert = new Word(RandomWordPicker.getOneRandomHiraKataWord());
-                            //System.out.println(toInsert.getWord());
-                            mWordViewModel.insert(toInsert);
+                                Word toInsert = new Word(RandomWordPicker.getOneRandomHiraKataWord());
+                                //System.out.println(toInsert.getWord());
+                                mWordViewModel.insert(toInsert);
 
+                            }
+                        } else if (signSystem.equals("kanji")) {
+                            for (int i = 0; i < 7; i++) {
+
+                                Word toInsert = new Word(RandomWordPicker.getOneRandomKanjiWord());
+                                // System.out.println(toInsert.getWord());
+                                mWordViewModel.insert(toInsert);
+                            }
                         }
-                    } else if (signSystem.equals("kanji")) {
-                        for (int i = 0; i < 7; i++) {
 
-                            Word toInsert = new Word(RandomWordPicker.getOneRandomKanjiWord());
-                           // System.out.println(toInsert.getWord());
-                            mWordViewModel.insert(toInsert);
-                        }
+                        answer1.setBackground(getResources().getDrawable(R.drawable.button_shape));
+                        answer2.setBackground(getResources().getDrawable(R.drawable.button_shape));
+                        answer3.setBackground(getResources().getDrawable(R.drawable.button_shape));
+                        answer4.setBackground(getResources().getDrawable(R.drawable.button_shape));
+                        isAnswerPicked = false;
                     }
-
-                    answer1.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    answer2.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    answer3.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    answer4.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                    isAnswerPicked = false;
                 }
+                blockRerol=true;
             }
+
         });
+
 
 
         answer1.setOnClickListener(new View.OnClickListener() {
@@ -133,15 +147,16 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!isAnswerPicked) {
                     if (answer1.getText() == rightAnswer) {
-                        answer1.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        answer1.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
-                        answer1.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        answer1.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked=true;
                     numberOfCyclesAlreadyDoneIt++;
                 }
+                blockRerol=false;
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
@@ -150,15 +165,16 @@ public class GuessItActivity extends AppCompatActivity {
                 if(!isAnswerPicked) {
 
                     if (answer2.getText() == rightAnswer) {
-                        answer2.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        answer2.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
-                        answer2.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        answer2.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked=true;
                     numberOfCyclesAlreadyDoneIt++;
                 }
+                blockRerol=false;
             }
         });
         answer3.setOnClickListener(new View.OnClickListener() {
@@ -166,15 +182,16 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!isAnswerPicked) {
                     if (answer3.getText() == rightAnswer) {
-                        answer3.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        answer3.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
-                        answer3.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        answer3.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked = true;
                     numberOfCyclesAlreadyDoneIt++;
                 }
+                blockRerol=false;
             }
         });
         answer4.setOnClickListener(new View.OnClickListener() {
@@ -182,17 +199,21 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(!isAnswerPicked) {
                     if (answer4.getText() == rightAnswer) {
-                        answer4.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+                        answer4.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
-                        answer4.setBackgroundColor(getResources().getColor(R.color.colorWrongAnswer));
+                        answer4.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
                     isAnswerPicked = true;
                     numberOfCyclesAlreadyDoneIt++;
                 }
+                blockRerol=false;
             }
         });
+
+        imgSign.performClick();
+
     }
 
 
@@ -200,13 +221,13 @@ public class GuessItActivity extends AppCompatActivity {
     public void makeGreenRightAnswer(){
 
         if (answer1.getText()==rightAnswer){
-            answer1.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+            answer1.setBackground(getResources().getDrawable(R.drawable.yes_shape));
         }else if(answer2.getText()==rightAnswer) {
-            answer2.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+            answer2.setBackground(getResources().getDrawable(R.drawable.yes_shape));
         }else if(answer3.getText()==rightAnswer){
-            answer3.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+            answer3.setBackground(getResources().getDrawable(R.drawable.yes_shape));
         }else if(answer4.getText()==rightAnswer){
-            answer4.setBackgroundColor(getResources().getColor(R.color.colorRightAnswer));
+            answer4.setBackground(getResources().getDrawable(R.drawable.yes_shape));
         }
     }
 

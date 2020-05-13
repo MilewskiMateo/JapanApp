@@ -7,14 +7,17 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    Button btDraw,btGuess,btCredits;
+    private Button btDraw,btGuess,btCredits;
+    private TextView tvTitle;
 
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
 
@@ -26,6 +29,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        btDraw=findViewById(R.id.btDraw);
+        btGuess=findViewById(R.id.btGuess);
+        btCredits=findViewById(R.id.btCredits);
+        tvTitle=findViewById(R.id.tvTitle);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "freeJapaneseFont.ttf");
+        btCredits.setTypeface(typeface);
+        btGuess.setTypeface(typeface);
+        btDraw.setTypeface(typeface);
+        tvTitle.setTypeface(typeface);
 
 
 
@@ -41,20 +54,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
-
-        // Add an observer on the LiveData returned by getAlphabetizedWords.
-        // The onChanged() method fires when the observed data changes and the activity is
-        // in the foreground.
-
-
-
-
-
-        btDraw=findViewById(R.id.btDraw);
-        btGuess=findViewById(R.id.btGuess);
-        btCredits=findViewById(R.id.btCredits);
 
         btDraw.setOnClickListener(new View.OnClickListener() {
             @Override

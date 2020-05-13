@@ -13,7 +13,7 @@
     <string name="nazwa">Nazwa</string>
     <string name="todo">TODO</string>
     <string name="mateusz_milewski">Mateusz Milewski</string>
-    <string name="aplikacja_stworzona_w_celach_dydaktycznych">Aplikacja stworzona w celach dydaktycznych</string>
+    <string name="aplikacja_stworzona_w_celach_dydaktycznych">Aplikacja stworzona \n w  celach dydaktycznych</string>
     <string name="znak">Znak</string>
     <string name="back">Back</string>
     <string name="number">number</string>
@@ -32,4 +32,5 @@
     <string name="kanjidwukorpek">Kanji:</string>
     <string name="katakanadwukropek">katakana:</string>
     <string name="hiraganadwukropek">hiragana:</string>
+    <string name="japanapp">JapanApp</string>
 </resources>

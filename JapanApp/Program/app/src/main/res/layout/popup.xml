@@ -5,6 +5,7 @@
     android:layout_width="350dp"
     android:layout_height="300dp"
     android:layout_gravity="center"
+    android:background="@drawable/background_shape"
     android:padding="10dp">
 
 
@@ -43,7 +44,7 @@
         android:id="@+id/btAddPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorRightAnswer"
+        android:background="@drawable/yes_shape"
         android:text="@string/yes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -54,7 +55,7 @@
         android:id="@+id/btDontAddPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorWrongAnswer"
+        android:background="@drawable/no_shape"
         android:text="@string/no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
