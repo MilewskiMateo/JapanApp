@@ -16,6 +16,8 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -29,7 +31,6 @@ public class DrawItActivity extends AppCompatActivity {
     private Button btDone,btAddPoints,btDontAddPoints;
     private PaintView paintView;
     private String signSystem;
-    private String rightAnswer;
     private Typeface typeface;
 
     private String actualWord;
@@ -39,6 +40,8 @@ public class DrawItActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_draw_it);
         popUpDialog = new Dialog(this);
 
@@ -68,6 +71,7 @@ public class DrawItActivity extends AppCompatActivity {
                 actualWord = RandomWordPicker.getOneRandomHiraKataWord();
                 tvDrawIt.setText(R.string.hiraganadwukropek);
                 tvSign.setText(actualWord);
+
                 break;
             case "katakana":
                 actualWord = RandomWordPicker.getOneRandomHiraKataWord();
@@ -88,28 +92,26 @@ public class DrawItActivity extends AppCompatActivity {
                 numberOfCyclesAlreadyDoneIt++;
 
 
+                showPopUpWindow();
                 switch (signSystem) {
                     case "hiragana":
                         actualWord = RandomWordPicker.getOneRandomHiraKataWord();
                         tvSign.setText(actualWord);
-                        rightAnswer=actualWord;
+
 
                         break;
                     case "katakana":
 
                         actualWord = RandomWordPicker.getOneRandomHiraKataWord();
                         tvSign.setText(actualWord);
-                        rightAnswer=actualWord;
                         break;
                     case "kanji":
 
                         actualWord = RandomWordPicker.getOneRandomKanjiWord();
                         tvSign.setText(actualWord);
-                        rightAnswer=actualWord;
                         break;
                 }
-                showPopUpWindow();
-                System.out.println(points);
+
                 paintView.clear();
 
 
@@ -131,11 +133,11 @@ public class DrawItActivity extends AppCompatActivity {
         dialogTvSimilar.setTypeface(typeface);
 
         if (signSystem.equals("hiragana")) {
-            rightImage.setImageResource(getResId("hira_" + rightAnswer, R.drawable.class));
+            rightImage.setImageResource(getResId("hira_" + actualWord, R.drawable.class));
         } else if (signSystem.equals("katakana")) {
-            rightImage.setImageResource(getResId("kata_" + rightAnswer, R.drawable.class));
+            rightImage.setImageResource(getResId("kata_" + actualWord, R.drawable.class));
         } else if (signSystem.equals("kanji")) {
-            rightImage.setImageResource(getResId("kanji_" + rightAnswer, R.drawable.class));
+            rightImage.setImageResource(getResId("kanji_" + actualWord, R.drawable.class));
         }
 
         // Converts 120 dip into its equivalent px

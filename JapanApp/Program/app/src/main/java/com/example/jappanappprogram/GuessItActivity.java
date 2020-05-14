@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +21,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 public class GuessItActivity extends AppCompatActivity {
-    private ImageView imgSign;
+    private ImageView imgSign, katana1,katana2;
     private Button answer1, answer2, answer3, answer4;
     private TextView tvSystemSign;
     private LottieAnimationView redLottieAnimation;
@@ -35,6 +37,8 @@ public class GuessItActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_guess_it);
 
         redLottieAnimation= findViewById(R.id.LottieRedAnimation);
@@ -44,6 +48,10 @@ public class GuessItActivity extends AppCompatActivity {
         answer3 = findViewById(R.id.btAnswer3);
         answer4 = findViewById(R.id.btAnswer4);
         imgSign = findViewById(R.id.imgSign);
+        katana1 = findViewById(R.id.imageView3);
+        katana2 = findViewById(R.id.imageView4);
+        katana1.bringToFront();
+        katana2.bringToFront();
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "freeJapaneseFont.ttf");
         answer1.setTypeface(typeface);

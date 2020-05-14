@@ -3,12 +3,12 @@
     android:shape="rectangle">
 
     <gradient android:startColor="@color/colorWrongAnswer"
-        android:endColor="#000000"
+        android:endColor="#333333"
         android:angle="180"
         />
     <stroke
         android:color="@color/colorAccent"
-        android:width="5dp"
+        android:width="3dp"
         />
     <corners android:radius="10dp"
         />

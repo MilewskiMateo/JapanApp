@@ -8,6 +8,29 @@
     android:background="@drawable/background_shape"
     tools:context=".GuessItActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="160dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="30dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toEndOf="@+id/conLay"
+        app:layout_constraintTop_toTopOf="@+id/tvSystemSign"
+        app:srcCompat="@drawable/katana_1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="160dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/conLay"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSystemSign"
+        app:srcCompat="@drawable/katana_1" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
