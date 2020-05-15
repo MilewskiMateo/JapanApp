@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout6"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_shape"
@@ -16,7 +16,7 @@
         android:layout_marginTop="30dp"
         android:rotation="180"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btGuess"
+        app:layout_constraintStart_toEndOf="@id/constraintForButtons"
         app:layout_constraintTop_toTopOf="@+id/tvTitle"
         app:srcCompat="@drawable/katana_1" />
 
@@ -34,63 +34,74 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btDraw"
-        android:layout_width="wrap_content"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintForButtons"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:background="@drawable/button_shape"
-        android:hapticFeedbackEnabled="false"
-        android:padding="15dp"
-        android:text="@string/drawit"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF"
-        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
-    <Button
-        android:id="@+id/btGuess"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="41dp"
-        android:background="@drawable/button_shape"
-        android:padding="15dp"
-        android:text="@string/guessit"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/btCredits"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btDraw" />
+        <Button
+            android:id="@+id/btDraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:hapticFeedbackEnabled="false"
+            android:padding="15dp"
+            android:text="@string/drawit"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btCredits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/button_shape"
-        android:padding="15dp"
-        android:text="@string/credits"
-        android:textColor="#000000"
-        android:textColorHighlight="#FF0000"
-        android:textColorLink="#FFFFFF"
-        android:textSize="36sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btGuess" />
+        <Button
+            android:id="@+id/btGuess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="41dp"
+            android:background="@drawable/button_shape"
+            android:padding="15dp"
+            android:text="@string/guessit"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/btCredits"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btDraw" />
+
+        <Button
+            android:id="@+id/btCredits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_shape"
+            android:padding="15dp"
+            android:text="@string/credits"
+            android:textColor="#000000"
+            android:textColorHighlight="#FF0000"
+            android:textColorLink="#FFFFFF"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btGuess" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="160dp"
         android:layout_height="550dp"
         android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/btGuess"
+        app:layout_constraintEnd_toStartOf="@id/constraintForButtons"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tvTitle"
         app:srcCompat="@drawable/katana_1" />

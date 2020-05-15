@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:padding="10dp">
 
@@ -67,11 +68,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/button_shape"
         android:padding="15dp">
 
-        <com.example.jappanappprogram.PaintView
+        <com.jeden.jappanappprogram.PaintView
             android:id="@+id/paintView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

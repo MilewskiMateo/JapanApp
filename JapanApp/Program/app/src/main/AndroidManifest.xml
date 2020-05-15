@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jappanappprogram">
+    package="com.jeden.jappanappprogram"
+    >
 
     <application
         android:allowBackup="true"
@@ -10,12 +11,12 @@
         android:supportsRtl="true"
         android:requestLegacyExternalStorage="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreditsActivity" />
-        <activity android:name=".PointsActivity" />
-        <activity android:name=".DrawItActivity" />
-        <activity android:name=".GuessItActivity" />
-        <activity android:name=".SystemChoiceActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.jeden.jappanappprogram.CreditsActivity" />
+        <activity android:name="com.jeden.jappanappprogram.PointsActivity" />
+        <activity android:name="com.jeden.jappanappprogram.DrawItActivity" />
+        <activity android:name="com.jeden.jappanappprogram.GuessItActivity" />
+        <activity android:name="com.jeden.jappanappprogram.SystemChoiceActivity" />
+        <activity android:name="com.jeden.jappanappprogram.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
