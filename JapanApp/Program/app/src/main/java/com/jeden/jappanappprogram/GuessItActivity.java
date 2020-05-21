@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -62,19 +63,47 @@ public class GuessItActivity extends AppCompatActivity {
         answer4.setTypeface(typeface);
         tvSystemSign.setTypeface(typeface);
 
+        final MediaPlayer correctSound = MediaPlayer.create(this, R.raw.correct);
+        final MediaPlayer wrongSound = MediaPlayer.create(this, R.raw.wrong);
+        final MediaPlayer swingSound = MediaPlayer.create(this, R.raw.swing);
+        float log1=(float)(Math.log(10-2)/Math.log(10));
+        correctSound.setVolume(log1,log1);
+
 
         signSystem = getIntent().getStringExtra("system");
         desiredNumberOfCycles = getIntent().getIntExtra("cycles", 20);
 
-        mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+       // mWordViewModel = new WordViewModel(getApplication());
 
         imgSign.getLayoutParams().height = 500;
         imgSign.getLayoutParams().width = 500;
 
+        imgSign.setImageResource(R.drawable.dice_red);
+        redLottieAnimation.setVisibility(View.INVISIBLE);
+
+
+
         if (signSystem.equals("hiragana")) {
             tvSystemSign.setText(R.string.hiragana);
+            answer1.setTextSize(24);
+            answer1.setMinWidth(120);
+            answer2.setTextSize(24);
+            answer2.setMinWidth(120);
+            answer3.setTextSize(24);
+            answer3.setMinWidth(120);
+            answer4.setTextSize(24);
+            answer4.setMinWidth(120);
         } else if (signSystem.equals("katakana")) {
             tvSystemSign.setText(R.string.katakana);
+            answer1.setTextSize(24);
+            answer1.setMinWidth(120);
+            answer2.setTextSize(24);
+            answer2.setMinWidth(120);
+            answer3.setTextSize(24);
+            answer3.setMinWidth(120);
+            answer4.setTextSize(24);
+            answer4.setMinWidth(120);
         } else if (signSystem.equals("kanji")) {
             tvSystemSign.setText(R.string.kanji);
             answer1.setTextSize(20);
@@ -121,7 +150,12 @@ public class GuessItActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!blockRerol) {
+                    swingSound.start();
+                    redLottieAnimation.setVisibility(View.VISIBLE);
+                    System.out.println("Odblokowane = "+ rightAnswer);
                     if (numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles) {
+                        removeEveryAllDataBase();
+
                         Intent guessIntent = new Intent(GuessItActivity.this, com.jeden.jappanappprogram.PointsActivity.class);
                         guessIntent.putExtra("points", points);
                         startActivity(guessIntent);
@@ -131,14 +165,15 @@ public class GuessItActivity extends AppCompatActivity {
 
                         mWordViewModel.deleteAll();
                         if (signSystem.equals("hiragana") || signSystem.equals("katakana")) {
-                            for (int i = 0; i < 7; i++) {
+                            System.out.println("dodaje Hire/kate");
+                            for (int i = 0; i < 9; i++) {
 
                                 Word toInsert = new Word(RandomWordPicker.getOneRandomHiraKataWord());
                                 mWordViewModel.insert(toInsert);
 
                             }
                         } else if (signSystem.equals("kanji")) {
-                            for (int i = 0; i < 7; i++) {
+                            for (int i = 0; i < 9; i++) {
 
                                 Word toInsert = new Word(RandomWordPicker.getOneRandomKanjiWord());
                                 mWordViewModel.insert(toInsert);
@@ -162,9 +197,11 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isAnswerPicked) {
                     if (answer1.getText() == rightAnswer) {
+                        correctSound.start();
                         answer1.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
+                        wrongSound.start();
                         answer1.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
@@ -180,9 +217,11 @@ public class GuessItActivity extends AppCompatActivity {
                 if (!isAnswerPicked) {
 
                     if (answer2.getText() == rightAnswer) {
+                        correctSound.start();
                         answer2.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
+                        wrongSound.start();
                         answer2.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
@@ -197,9 +236,11 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isAnswerPicked) {
                     if (answer3.getText() == rightAnswer) {
+                        correctSound.start();
                         answer3.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
+                        wrongSound.start();
                         answer3.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
@@ -214,9 +255,11 @@ public class GuessItActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isAnswerPicked) {
                     if (answer4.getText() == rightAnswer) {
+                        correctSound.start();
                         answer4.setBackground(getResources().getDrawable(R.drawable.yes_shape));
                         points++;
                     } else {
+                        wrongSound.start();
                         answer4.setBackground(getResources().getDrawable(R.drawable.no_shape));
                         makeGreenRightAnswer();
                     }
@@ -224,6 +267,7 @@ public class GuessItActivity extends AppCompatActivity {
                     numberOfCyclesAlreadyDoneIt++;
                 }
                 blockRerol = false;
+
             }
         });
         imgSign.performClick();
@@ -259,11 +303,23 @@ public class GuessItActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        removeEveryAllDataBase();
+
+    }
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        removeEveryAllDataBase();
+
+    }
+
+    private void removeEveryAllDataBase(){
+
         if (mWordViewModel != null && mWordViewModel.getAllWords().hasObservers()) {
-            mWordViewModel.getAllWords().removeObservers(this);
+            mWordViewModel.getAllWords().removeObservers( this);
         }
         mWordViewModel.deleteAll();
-
     }
 }
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -35,6 +36,8 @@ public class PointsActivity extends AppCompatActivity {
         tvPointsText.setTypeface(typeface);
         btBack.setTypeface(typeface);
 
+        final MediaPlayer clickSound = MediaPlayer.create(this, R.raw.click);
+
 
         int points = getIntent().getIntExtra("points", 0);
         tvPointsValue.setText(String.valueOf(points));
@@ -42,6 +45,7 @@ public class PointsActivity extends AppCompatActivity {
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 Intent goBack = new Intent(PointsActivity.this, com.jeden.jappanappprogram.MainActivity.class);
                 startActivity(goBack);
             }

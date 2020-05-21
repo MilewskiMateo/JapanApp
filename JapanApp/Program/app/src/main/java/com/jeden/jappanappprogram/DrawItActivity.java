@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -54,8 +55,13 @@ public class DrawItActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         paintView.init(metrics);
 
+        final MediaPlayer clickSound = MediaPlayer.create(this, R.raw.click);
+
+
         desiredNumberOfCycles = getIntent().getIntExtra("cycles", 10);
         signSystem = getIntent().getStringExtra("system");
+
+
 
         switch (signSystem) {
             case "hiragana":
@@ -80,6 +86,7 @@ public class DrawItActivity extends AppCompatActivity {
         btDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 numberOfCyclesAlreadyDoneIt++;
 
                 showPopUpWindow();
@@ -120,6 +127,9 @@ public class DrawItActivity extends AppCompatActivity {
         btAddPoints.setTypeface(typeface);
         dialogTvSimilar.setTypeface(typeface);
 
+        final MediaPlayer correctSound = MediaPlayer.create(this, R.raw.correct);
+        final MediaPlayer wrongSound = MediaPlayer.create(this, R.raw.wrong);
+
         if (signSystem.equals("hiragana")) {
             rightImage.setImageResource(getResId("hira_" + actualWord, R.drawable.class));
         } else if (signSystem.equals("katakana")) {
@@ -147,6 +157,9 @@ public class DrawItActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                float log1=(float)(Math.log(10-2)/Math.log(10));
+                correctSound.setVolume(log1,log1);
+                correctSound.start();
                 if (numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles) {
                     Intent guessIntent = new Intent(DrawItActivity.this, com.jeden.jappanappprogram.PointsActivity.class);
                     guessIntent.putExtra("points", points);
@@ -162,6 +175,7 @@ public class DrawItActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                wrongSound.start();
                 if (numberOfCyclesAlreadyDoneIt == desiredNumberOfCycles) {
                     Intent guessIntent = new Intent(DrawItActivity.this, com.jeden.jappanappprogram.PointsActivity.class);
                     guessIntent.putExtra("points", points);

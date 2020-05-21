@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -53,6 +54,8 @@ public class SystemChoiceActivity extends AppCompatActivity {
         tvTitle.setTypeface(typeface);
         tvCyclesTxt.setTypeface(typeface);
 
+        final MediaPlayer clickSound = MediaPlayer.create(this, R.raw.click);
+
 
         tvCyclesNumber.setText(String.valueOf(currentSeekbarValue));
 
@@ -91,6 +94,7 @@ public class SystemChoiceActivity extends AppCompatActivity {
         btHiragana.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 String mode = getIntent().getStringExtra("mode");
                 if (mode.equals("draw")) {
                     Intent hiragana = new Intent(SystemChoiceActivity.this, DrawItActivity.class);
@@ -109,6 +113,7 @@ public class SystemChoiceActivity extends AppCompatActivity {
         btKatakana.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 String mode = getIntent().getStringExtra("mode");
                 if (mode.equals("draw")) {
                     Intent katakana = new Intent(SystemChoiceActivity.this, DrawItActivity.class);
@@ -126,6 +131,7 @@ public class SystemChoiceActivity extends AppCompatActivity {
         btKanji.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 String mode = getIntent().getStringExtra("mode");
                 if (mode.equals("draw")) {
                     Intent kanji = new Intent(SystemChoiceActivity.this, DrawItActivity.class);

@@ -9,6 +9,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity {
         btDraw.setTypeface(typeface);
         tvTitle.setTypeface(typeface);
 
+        final MediaPlayer clickSound = MediaPlayer.create(this, R.raw.click);
 
         btDraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 Intent drawIntent = new Intent(MainActivity.this, com.jeden.jappanappprogram.SystemChoiceActivity.class);
                 drawIntent.putExtra("mode", "draw");
                 startActivity(drawIntent);
@@ -62,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         btGuess.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 Intent guessIntent = new Intent(MainActivity.this, com.jeden.jappanappprogram.SystemChoiceActivity.class);
                 guessIntent.putExtra("mode", "guess");
                 startActivity(guessIntent);
@@ -71,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         btCredits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                clickSound.start();
                 Intent creditsIntent = new Intent(MainActivity.this, com.jeden.jappanappprogram.CreditsActivity.class);
                 startActivity(creditsIntent);
 
