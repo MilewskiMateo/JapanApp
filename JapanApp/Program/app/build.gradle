@@ -10,7 +10,7 @@ android {
         applicationId "com.jeden.jappanappprogram"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 4
+        versionCode 5
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -64,6 +64,11 @@ dependencies {
 
 // Testing
     androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.2.0'
+
+    androidTestCompile "com.android.support.test.espresso:espresso-contrib:3.0.2"
 }
 
 

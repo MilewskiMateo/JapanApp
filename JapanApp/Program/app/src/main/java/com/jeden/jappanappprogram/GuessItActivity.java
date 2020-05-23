@@ -32,6 +32,7 @@ public class GuessItActivity extends AppCompatActivity {
     private String rightAnswer;
     private Boolean isAnswerPicked = false;
     private Boolean blockRerol = false;
+    private Boolean blockAnswers = true;
     private int numberOfCyclesAlreadyDoneIt, desiredNumberOfCycles, points;
     private String signSystem;
 
@@ -42,6 +43,7 @@ public class GuessItActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_guess_it);
+
 
         redLottieAnimation = findViewById(R.id.LottieRedAnimation);
         tvSystemSign = findViewById(R.id.tvSystemSign);
@@ -63,6 +65,10 @@ public class GuessItActivity extends AppCompatActivity {
         answer4.setTypeface(typeface);
         tvSystemSign.setTypeface(typeface);
 
+        rightAnswer=null;
+
+
+
         final MediaPlayer correctSound = MediaPlayer.create(this, R.raw.correct);
         final MediaPlayer wrongSound = MediaPlayer.create(this, R.raw.wrong);
         final MediaPlayer swingSound = MediaPlayer.create(this, R.raw.swing);
@@ -81,6 +87,11 @@ public class GuessItActivity extends AppCompatActivity {
 
         imgSign.setImageResource(R.drawable.dice_red);
         redLottieAnimation.setVisibility(View.INVISIBLE);
+
+        answer1.setText("click");
+        answer2.setText("dice");
+        answer3.setText("to");
+        answer4.setText("roll");
 
 
 
@@ -126,7 +137,7 @@ public class GuessItActivity extends AppCompatActivity {
                     answer3.setText(words.get(2).getWord());
                     answer4.setText(words.get(3).getWord());
 
-                    int rand = (int) (Math.random() * 3 + 2) - 1;
+                    int rand = (int) (Math.random() * 4) ;
                     rightAnswer = words.get(rand).getWord();
 
                     System.out.println("rightAnswer=" + rightAnswer);
@@ -188,6 +199,7 @@ public class GuessItActivity extends AppCompatActivity {
                     }
                 }
                 blockRerol = true;
+                blockAnswers = false;
             }
         });
 
@@ -195,82 +207,89 @@ public class GuessItActivity extends AppCompatActivity {
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isAnswerPicked) {
-                    if (answer1.getText() == rightAnswer) {
-                        correctSound.start();
-                        answer1.setBackground(getResources().getDrawable(R.drawable.yes_shape));
-                        points++;
-                    } else {
-                        wrongSound.start();
-                        answer1.setBackground(getResources().getDrawable(R.drawable.no_shape));
-                        makeGreenRightAnswer();
+                if(!blockAnswers) {
+                    if (!isAnswerPicked) {
+                        if (answer1.getText() == rightAnswer) {
+                            correctSound.start();
+                            answer1.setBackground(getResources().getDrawable(R.drawable.yes_shape));
+                            points++;
+                        } else {
+                            wrongSound.start();
+                            answer1.setBackground(getResources().getDrawable(R.drawable.no_shape));
+                            makeGreenRightAnswer();
+                        }
+                        isAnswerPicked = true;
+                        numberOfCyclesAlreadyDoneIt++;
                     }
-                    isAnswerPicked = true;
-                    numberOfCyclesAlreadyDoneIt++;
+                    blockRerol = false;
                 }
-                blockRerol = false;
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isAnswerPicked) {
-
-                    if (answer2.getText() == rightAnswer) {
-                        correctSound.start();
-                        answer2.setBackground(getResources().getDrawable(R.drawable.yes_shape));
-                        points++;
-                    } else {
-                        wrongSound.start();
-                        answer2.setBackground(getResources().getDrawable(R.drawable.no_shape));
-                        makeGreenRightAnswer();
+                if(!blockAnswers) {
+                    if (!isAnswerPicked) {
+                        if (answer2.getText() == rightAnswer) {
+                            correctSound.start();
+                            answer2.setBackground(getResources().getDrawable(R.drawable.yes_shape));
+                            points++;
+                        } else {
+                            wrongSound.start();
+                            answer2.setBackground(getResources().getDrawable(R.drawable.no_shape));
+                            makeGreenRightAnswer();
+                        }
+                        isAnswerPicked = true;
+                        numberOfCyclesAlreadyDoneIt++;
                     }
-                    isAnswerPicked = true;
-                    numberOfCyclesAlreadyDoneIt++;
+                    blockRerol = false;
                 }
-                blockRerol = false;
             }
         });
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isAnswerPicked) {
-                    if (answer3.getText() == rightAnswer) {
-                        correctSound.start();
-                        answer3.setBackground(getResources().getDrawable(R.drawable.yes_shape));
-                        points++;
-                    } else {
-                        wrongSound.start();
-                        answer3.setBackground(getResources().getDrawable(R.drawable.no_shape));
-                        makeGreenRightAnswer();
+                if(!blockAnswers) {
+                    if (!isAnswerPicked) {
+                        if (answer3.getText() == rightAnswer) {
+                            correctSound.start();
+                            answer3.setBackground(getResources().getDrawable(R.drawable.yes_shape));
+                            points++;
+                        } else {
+                            wrongSound.start();
+                            answer3.setBackground(getResources().getDrawable(R.drawable.no_shape));
+                            makeGreenRightAnswer();
+                        }
+                        isAnswerPicked = true;
+                        numberOfCyclesAlreadyDoneIt++;
                     }
-                    isAnswerPicked = true;
-                    numberOfCyclesAlreadyDoneIt++;
+                    blockRerol = false;
                 }
-                blockRerol = false;
             }
         });
         answer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isAnswerPicked) {
-                    if (answer4.getText() == rightAnswer) {
-                        correctSound.start();
-                        answer4.setBackground(getResources().getDrawable(R.drawable.yes_shape));
-                        points++;
-                    } else {
-                        wrongSound.start();
-                        answer4.setBackground(getResources().getDrawable(R.drawable.no_shape));
-                        makeGreenRightAnswer();
+                if(!blockAnswers) {
+                    if (!isAnswerPicked) {
+                        if (answer4.getText() == rightAnswer) {
+                            correctSound.start();
+                            answer4.setBackground(getResources().getDrawable(R.drawable.yes_shape));
+                            points++;
+                        } else {
+                            wrongSound.start();
+                            answer4.setBackground(getResources().getDrawable(R.drawable.no_shape));
+                            makeGreenRightAnswer();
+                        }
+                        isAnswerPicked = true;
+                        numberOfCyclesAlreadyDoneIt++;
                     }
-                    isAnswerPicked = true;
-                    numberOfCyclesAlreadyDoneIt++;
+                    blockRerol = false;
                 }
-                blockRerol = false;
 
             }
         });
-        imgSign.performClick();
+
 
     }
 
